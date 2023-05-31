@@ -1,0 +1,65 @@
+body {
+    text-align: center;
+    align-items: center;
+    background-color: bisque;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+td {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    transition: 0.5s;
+    border: 3px solid orange;
+    background-color: purple;
+    color: wheat;
+    
+}
+
+
+.board td:hover {
+    background-color: lightsalmon;
+}
+
+.touched {
+    background-color: orange;
+}
+
+#timer {
+    color: white;
+    display: inline-block;
+    padding: 5px;
+    margin-top: 20px;
+    font-size: 40px;
+    border: 2px solid blue;
+    background-color: rgb(61, 12, 238);
+    border-width: 5px;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    background-color: rgb(26, 174, 238);
+}
+
+.modal {
+    margin-top: 80px;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 400px;
+    height: 150px;
+    display: none;
+    background-color: rgb(26, 174, 238);
+    display: none;
+    font-size: 40px;
+}
