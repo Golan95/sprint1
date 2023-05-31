@@ -23,6 +23,7 @@ function onInit() {
 
 function play() {
   console.log('play');
+  startTimer()
   runBoard(mainBoard)
 }
 
@@ -34,7 +35,7 @@ function buildBoard() {
   for (var i = 0; i < gSize; i++) {
     board.push([])
     for (var j = 0; j < gSize; j++) {
-      if(i === 0 && j === 0){
+      if(i === 0 && j === 0 || i=== 2 && j === 2){
       board[i][j] = mines
       
       }
@@ -91,14 +92,16 @@ function renderBoard(board) {
           strHTML += `<td class="${currCell}"
                           onclick="onCellClicked(${i},${j},this)"
                           onclick="onCellMarked(${i},${j},this)"
-                          data-i="${i}" data-j="${j}">
-                                ${currCell}
+                          data-i="${i}" data-j="${j}"> <span class="cell">
+                                ${currCell} </span>
                       </td>`
+                      
       }
 
       strHTML += '</tr>'
   }
   // console.log('strHTML:', strHTML)
+  
   document.addEventListener('contextmenu', event => event.preventDefault());
   const elBoard = document.querySelector('.board')
   elBoard.innerHTML = strHTML
@@ -106,7 +109,7 @@ function renderBoard(board) {
 
 function onCellClicked(cellI, cellJ, elCell) {
   console.log('elCell:', elCell)
-  startTimer()
+  
   if(elCell.innerText === mines){
     console.log('game over')
     stopTimer()

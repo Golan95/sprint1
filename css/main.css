@@ -9,6 +9,7 @@ table {
     border-collapse: collapse;
     margin: 0 auto;
     margin-top: 20px;
+    
 }
 
 td {
@@ -21,6 +22,14 @@ td {
     background-color: purple;
     color: wheat;
     
+    
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 
